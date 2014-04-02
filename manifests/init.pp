@@ -6,6 +6,11 @@ class longview($api_key) {
 
   require longview::dependencies
 
+  File {
+    group => 'root',
+    owner => 'root',
+  }
+
   file { '/etc/linode/':
     ensure => directory,
     mode   => '0755',
