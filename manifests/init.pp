@@ -26,6 +26,7 @@ class longview($api_key) {
 
   package { 'linode-longview':
     ensure  => latest,
+    notify  => Service['longview'],
     require => File['/etc/linode/longview.key'],
   }
 
